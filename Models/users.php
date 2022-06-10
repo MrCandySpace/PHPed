@@ -24,6 +24,22 @@ function getUsers()
     return $reponse->fetchAll();
 }
 
+/**
+ * Retourne un utilisateur grâce à son ID
+ */
+function getUserByID(int $id)
+{
+    $bdd = connection();
+    $sql = "SELECT * 
+        FROM `users` 
+        WHERE id = ?";
+    // Sécurisation du code -> anti-injection 
+    $requete = $bdd->prepare($sql); //préparation de la requête
+    $requete->execute([$id]); //execution de la requête en passant 2 paramètres
+    $data = $requete->fetchAll();
+    return $data[0];
+}
+
 
 /**
  * Retourne un utilisateur suivant son login et son mot de passe 

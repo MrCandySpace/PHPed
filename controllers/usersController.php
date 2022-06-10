@@ -14,6 +14,14 @@ if (isset($_GET['action'])) {
             createUser($_POST['user'], $_POST['pwd']);
             header("Location: index.php?page=utilisateurs");
             break;
+        case "update":
+            $user = getUserByID($_GET['id']);
+            include("pages/editUser.php");
+            break;
+        case "save":
+            updateUser($_POST['id'],$_POST['user'],$_POST['pwd']);
+            header("Location: index.php?page=utilisateurs");
+            break;
         default:
             $users = getUsers();
             include("pages/404.php");
