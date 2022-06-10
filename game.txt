@@ -1,0 +1,228 @@
+
+<?php
+
+  function helloWorld(){
+    return "Hello World!"; 
+  }
+  echo helloWorld();
+?>
+<?php
+//Mettez votre function ici
+function quiEstLeMeilleurProf(){
+    return "Le prof de programmation Web"; 
+  }
+  echo quiEstLeMeilleurProf();
+?>
+<?php
+function jeRetourneMonArgument($arg){
+
+   return $arg; 
+  }
+
+?>
+<?php
+
+    function concatenation($argu1,$argu2){
+
+        return $argu1.$argu2;
+    }
+
+?>
+<?php
+    function concatenationAvecEspace($argu1,$argu2){
+    
+    return $argu1." ".$argu2;
+    }
+?>
+<?php
+    function somme($num1,$num2 ){
+        return $num1+$num2;
+    }
+?>
+<?php
+function soustraction($num1,$num2 ){
+
+    return $num1-$num2;
+}
+?>
+<?php
+function multiplication($num1,$num2 ){
+
+    return $num1*$num2;
+}
+?>
+<?php
+function estIlMajeure($age){
+    if($age>=18){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+?>
+<?php
+function plusGrand($argu1,$argu2){
+    if($argu1>$argu2){
+        return $argu1;
+    }
+    else{
+        return $argu2;
+    }
+}
+?>
+<?php
+function plusPetit($argu1,$argu2){
+    if($argu1<$argu2){
+        return $argu1;
+    }
+    else{
+        return $argu2;
+    }
+}
+?>
+<?php
+function plusPetit($argu1,$argu2,$argu3){
+    if($argu1<$argu2 && $argu1<$argu3){
+        return $argu1;
+    }
+    else if($argu2<$argu1 && $argu2<$argu3){
+        return $argu2;
+    }
+    else{
+        return $argu3;
+    }
+    
+}
+?>
+<?php
+    function premierElementTableau(array $tab){
+
+        if($tab[0]){
+            return $tab[0];
+        } else {
+            return null;
+        }
+
+    }
+?>
+<?php
+function dernierElementTableau(array $tab){
+    if (empty($tab)){
+        return null;
+    } else {
+        return end($tab);
+    }
+}
+?>
+<?php
+function plusGrand(array $tab){
+    if (empty($tab)){
+        return null;
+    } else {
+        return max($tab);
+    }
+}
+?>
+<?php
+function plusPetit(array $tab){
+    if (empty($tab)){
+        return null;
+    } else {
+        return min($tab);
+    }
+}
+?>
+<?php
+function verificationPassword(string $nb){
+    
+    if (strlen($nb)>=8){
+        return true;
+    } else {
+        return false;
+    }
+}
+?>
+<?php
+function verificationPassword ($arg) {
+    $tab = str_split($arg);
+    foreach ($tab as $po)
+    {
+        if(strlen($arg)>=8)
+        $length = true;
+    }
+    foreach ($tab as $po)
+    {
+    if (ctype_digit($po)>=1)
+        $digit= true;
+    }
+    foreach ($tab as $po)
+    {
+        if (ctype_upper($po)>=1)
+        $upper= true;
+    }
+    foreach ($tab as $po)
+    {
+        if (ctype_lower($po)>=1)
+        $lower= true;
+    }
+if ($length && $digit && $upper && $lower) {
+    return true;
+}else {
+return false;
+}
+}
+?>
+<?php
+function capital($pays){
+    switch ($pays){
+    case "France":
+    echo "Paris";
+    break;
+
+    case "Allemagne":
+    echo "Berlin";
+    break;
+
+    case "Italie":
+    echo "Rome";
+    break;
+
+    case "Maroc":
+    echo "Rabat";
+    break;
+
+    case "Espagne":
+    echo "Madrid";
+    break;
+
+    case "Portugal":
+    echo "Lisbonne";
+    break;
+
+    case "Angleterre":
+    echo "Londres";
+    break;
+
+    default:
+    echo "Inconnu";
+
+}
+}
+?>  
+
+
+
+
+<?php
+function quelleAnnee(){
+    $date = date("Y");
+    return $date;
+}
+?>
+<?php
+function quelleDate(){
+    $kivbbiv = Date('d/m/Y');
+    return $kivbbiv;
+}
+?>

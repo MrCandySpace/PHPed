@@ -1,0 +1,42 @@
+/* ___________________ Général ___________________ */
+body {
+    background-image: linear-gradient(to right bottom, #599bff, #00bfff, #00ddff, #00f3bb, #00ff4d);
+    background-repeat: no-repeat;
+}
+
+#menu div {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+/* ___________________ Page 404 ___________________ */
+#section-404 {
+    width: 100%;
+    display: flex;
+
+}
+
+#section-404 div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.div-404 {
+    display: flex;
+}
+
+.div-404 img {
+    width: 40%;
+
+}
+
+
+/* ___________________ Page xxFormConfirmation ___________________ */
+.section-xxConfirm div {
+    margin: 5%;
+}
