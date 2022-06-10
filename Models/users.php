@@ -1,19 +1,6 @@
 <?php
 
-/**
- * Se connecte à la bdd
- */
-function connection()
-{
-    $user = "root"; //utilisateur de MySQL
-    $pass = ""; // mot de passe 
-    $dsn = "mysql:host=localhost;dbname=blog"; //Information sur le srveur MySQL
-    $bdd = new PDO($dsn, $user, $pass);
-
-    return $bdd;
-}
-
-
+require_once("odels/utils.php");
 /**
  * Retourne la liste des utilisateurs 
  */
@@ -68,6 +55,7 @@ function loginByUser(string $login, string $pwd)
     // var_dump($user[0]['name']); 
     if (isset($user[0])) {
         $_SESSION['user'] = $user[0]['name'];
+        $_SESSION['userID'] = $user[0]['id'];
         setcookie('user', $user[0]['name']);
         return true;
     } else {
