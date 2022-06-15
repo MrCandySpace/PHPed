@@ -32,6 +32,6 @@ if (isset($_GET['action'])) {
     }
 } else {
     // $bdd = connection();
-    $users = getUsers();
-    include("pages/articles.php");
+    $posts = getPosts();
+    include("pages/acceuil.php");
 }

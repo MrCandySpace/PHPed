@@ -1,6 +1,6 @@
 <?php
 
-require_once("odels/utils.php");
+require_once("Models/utils.php");
 /**
  * Retourne la liste des utilisateurs 
  */
