@@ -18,3 +18,28 @@ Bien-sûr mais à vos risque et périls
 Je suis un débutant dans le dev et je ne garantis pas la fonctionnalité totale du site. 
 
 Je vous conseille plutôt de vous inspirer ou si vous développer un site identique de vous inspirer.
+---
+# La base de donnée
+
+Dans phpmyadmin, crée un nouvelle base de donnée nommé : 
+```
+blog
+```
+une fois dedans faite 2 tables : 
+```
+posts
+-->
+1	    id Primaire	     int(11)		      	Non	Aucun(e)		     AUTO_INCREMENT
+2	    name Index	     varchar(255)	    utf8_general_ci	      	Non	Aucun(e)
+3	    password	      varchar(255)	    utf8_general_ci	       	Non	Aucun(e)
+```
+```
+users
+--> 
+1	id Primaire	int(11)	          		Non	Aucun(e)	            	AUTO_INCREMENT	
+2	title	varchar(255)	              utf8_general_ci	            	Non	Aucun(e)		
+3	content	text	                    utf8_general_ci		            Non	Aucun(e)			
+4	created_date	                        datetime			            Non	Aucun(e)			
+5	user_id	                               int(11)		             	Non	Aucun(e)		
+
+```
